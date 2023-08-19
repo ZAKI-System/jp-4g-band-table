@@ -7,7 +7,7 @@ jp-4g-band-table
 
 ## 使用方法
 
-1. ダウンロードして開くか、GitHubのURLを開く
+1. ダウンロードして開くか、[GitHubのURL](https://zaki-system.github.io/jp-4g-band-table/)を開く
 2. 入力boxに対応bandを","または"/"区切りで入力し、[表示]を押す
 
 ## 作成者/最終更新年

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4G band 対応表</title>
+    <style>
+        body {
+            background-color: #AAA;
+        }
+        table {
+            background-color: #CCC;
+            border: 3px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        thead th {
+            width: 5em;
+        }
+        .compatible {
+            color: green;
+        }
+        .incompatible {
+            color: red;
+        }
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid gray;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>日本の4G band周波数対応表</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>(4G)</th>
+                    <th>docomo</th>
+                    <th>au</th>
+                    <th>SoftBank</th>
+                    <th>Rakuten</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>メイン</th>
+                    <td>
+                        <div id="b1-d">B1 2.0G</div>
+                        <div id="b3-d">B3 1.8G</div>
+                        <div id="b21-d">B21 1.5G</div>
+                    </td>
+                    <td>
+                        <div id="b1-a">B1 2.0G</div>
+                        <div id="b3-a">B3 1.8G</div>
+                        <div id="b11-a">B11 1.5G</div>
+                    </td>
+                    <td>
+                        <div id="b1-s">B1 2.0G</div>
+                        <div id="b3-s">B3 1.8G</div>
+                        <div id="b11-s">B11 1.5G</div>
+                    </td>
+                    <td>
+                        <div id="b3-r">B3 1.8G</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>エリア</th>
+                    <td>
+                        <div id="b19-d">B19 800M</div>
+                        <div id="b28-d">B28 700M</div>
+                    </td>
+                    <td>
+                        <div id="b18-a">B18 800M</div>
+                        <div id="b26-a">B26 800M</div>
+                        <div id="b28-a">B28 700M</div>
+                    </td>
+                    <td>
+                        <div id="b8-s">B8 900M</div>
+                        <div id="b28-s">B28 700M</div>
+                    </td>
+                    <td>
+                        <div id="b18-r">B18 800M(au)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>AXGP<br>WiMAX</th>
+                    <td>--</td>
+                    <td>
+                        <div id="b41-a">B41 2.5G</div>
+                    </td>
+                    <td>
+                        <div id="b41-s">B41 2.5G</div>
+                    </td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <th>速度</th>
+                    <td>
+                        <div id="b42-d">B42 3.5G</div>
+                    </td>
+                    <td>
+                        <div id="b42-a">B42 3.5G</div>
+                    </td>
+                    <td>
+                        <div id="b42-s">B42 3.5G</div>
+                    </td>
+                    <td>--</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <span>他の対応band:</span>
+            <span id="other"></span>
+        </div>
+        <div>
+            <label for="bands">対応bandを入力:</label>
+            <input type="text" name="bands" id="bands">
+            <button type="button" id="exec">表示</button>
+        </div>
+        <div>","または"/"区切り</div>
+        <div>
+            <p>この表では以下の分け方をしています</p>
+            <ul>
+                <li>メイン: 1-2GHz程度の一般的な周波数</li>
+                <li>エリア: 1GHz未満のいわゆるプラチナバンド</li>
+                <li>AXGP/WiMAX: band41の2.5GHz</li>
+                <li>速度: band42の3.5GHz</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div>2023 ZAKI System</div>
+    </footer>
+</body>
+</html>

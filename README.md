@@ -12,4 +12,4 @@ jp-4g-band-table
 
 ## 作成者/最終更新年
 
-[ZAKI](https://twitter.com/ZAKI6tw) / 2023
+[ZAKI](https://twitter.com/ZAKI6tw) / 2024

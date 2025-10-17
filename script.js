@@ -45,4 +45,26 @@ window.addEventListener("DOMContentLoaded", () => {
     bands.addEventListener("keypress", (ev) => {
         if (ev.key == "Enter") button.click();
     });
+
+    // メッセージイベント
+    window.addEventListener("message", (ev) => {
+        const data = ev.data;
+        if (data == null) throw new Error("data null");
+        if (typeof data != "object") throw new Error("data not object");
+        if (Array.isArray(data)) throw new Error("data is array");
+        if (!("cmd" in data)) throw new Error("cmd not found");
+        if (typeof data.cmd != "string") throw new Error("cmd not string");
+        if (!("data" in data)) throw new Error("data not found");
+        if (typeof data.data != "string") throw new Error("data not string");
+        switch (data.cmd) {
+            case "input": {
+                bands.value = data.data;
+                button.click();
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    });
 });
